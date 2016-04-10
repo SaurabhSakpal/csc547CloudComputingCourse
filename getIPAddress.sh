@@ -4,7 +4,7 @@
 #
 #
 #echo "$1"
-abc=`docker inspect 2e3badfe836a | grep -A 30 "NetworkSettings" | grep "\"IPAddress\":"`
+abc=`docker inspect $1 | grep -A 30 "NetworkSettings" | grep "\"IPAddress\":"`
 #echo "$abc"
 IFS='"' read -ra ADDR <<< "$abc"
 echo "${ADDR[3]}"
