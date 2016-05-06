@@ -1,0 +1,13 @@
+First make sure all the scripts in the directory have read,write and execute previleges for the current user
+
+Then in the mysql_container_config write the port number you want to assign your first mysql container
+Secondly in the run-server.sh file change the public_ip variable to public IP address of the machine on which you would like to expose the mysql container to.
+
+Finally clear the container_file contents
+
+Once all of this is done all you need to do is execute the script in following way:
+
+sudo ./run-server.sh
+
+this creates mysql container. If you create executing this script again and again new mysql containers will be spawned.
+
